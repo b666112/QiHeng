@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.qichengmall.mapper.StockOrderInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.example.qichengmall.entity.StockOrderInfoEntity" id="stockOrderInfoMap">
+        <result property="id" column="id"/>
+        <result property="stockOrderId" column="stock_order_id"/>
+        <result property="productId" column="product_id"/>
+        <result property="number" column="number"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+        <result property="price" column="price"/>
+        <result property="sendNum" column="send_num"/>
+        <result property="flag" column="flag"/>
+        <result property="specialId" column="special_id"/>
+        <result property="unionId" column="union_id"/>
+        <result property="unionNumber" column="union_number"/>
+        <result property="originPrice" column="origin_price"/>
+        <result property="vipDiscount" column="vip_discount"/>
+        <result property="activitySkuType" column="activity_sku_type"/>
+        <result property="activityId" column="activity_id"/>
+        <result property="activityDesc" column="activity_desc"/>
+        <result property="increasePrice" column="increase_price"/>
+        <result property="taxprice" column="taxPrice"/>
+        <result property="customstax" column="customsTax"/>
+        <result property="valueaddedtax" column="valueAddedTax"/>
+        <result property="consumptiontax" column="consumptionTax"/>
+    </resultMap>
+
+
+</mapper>
