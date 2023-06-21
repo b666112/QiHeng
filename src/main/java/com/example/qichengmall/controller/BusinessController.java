@@ -52,7 +52,7 @@ public class BusinessController {
         return R.success(pagenow);
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public R<String> update(HttpServletRequest request, @RequestBody Business business){
         businessService.updateById(business);
         return R.success("商家信息修改成功");
@@ -60,7 +60,9 @@ public class BusinessController {
     @PutMapping("/updatePassword")
     public R<String> updatePassword(String password,Long id){
         Business byId = businessService.getById(id);
-        byId.setPassword(DigestUtils.md5DigestAsHex(password.getBytes()));
+        if(password.equals("")||password.length()==0){
+            byId.setPassword(DigestUtils.md5DigestAsHex(password.getBytes()));
+        }
         businessService.updateById(byId);
         return R.success("商家信息修改成功");
     }

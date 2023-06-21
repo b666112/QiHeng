@@ -13,6 +13,7 @@ public class EmployeeWebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(roleCheckInterceptor).addPathPatterns("/employee/**")
+                .addPathPatterns("/order/uploadExcel")
                 .excludePathPatterns("/employee/logout","/employee/login");
 
     }

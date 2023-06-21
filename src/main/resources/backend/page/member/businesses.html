@@ -85,6 +85,7 @@
               class="blueBug"
               @click="addBusinessHandle(scope.row.id)"
               :class="{notAdmin:user !== 'admin'}"
+              v-if="userRole !== 'business'"
             >
               编辑
             </el-button>

@@ -40,3 +40,10 @@ function queryEmployeeById (id) {
     method: 'get'
   })
 }
+
+function queryEmployeeSelfById (id) {
+  return $axios({
+    url: `/employee/queryEmployeeSelfById/${id}`,
+    method: 'get'
+  })
+}

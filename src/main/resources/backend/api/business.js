@@ -27,7 +27,7 @@ function addBusiness (params) {
 // 修改---添加商家
 function editBusiness (params) {
     return $axios({
-        url: '/business/updatePassword',
+        url: '/business/update',
         method: 'put',
         data: { ...params }
     })
@@ -42,7 +42,7 @@ function queryBusinessById (id) {
 }
 function updateBusinessPassword(params){
     return $axios({
-        url:'/business',
+        url:'/business/updatePassword',
         method:'put',
         data: params
     })

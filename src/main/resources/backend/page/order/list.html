@@ -423,7 +423,7 @@
               this.handleQuery();
             }else {
                 this.fileList = [];
-                this.$message.error(`上传失败`);
+                this.$message.error(response.msg || `上传失败`);
             }
 
             // if (response.code === 1) {
